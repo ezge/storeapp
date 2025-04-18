@@ -9,7 +9,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import com.example.storeapp.presentation.viewmodel.CartViewModel
 import com.example.storeapp.presentation.viewmodel.CheckoutViewModel
-import com.example.storeapp.StoreApp
 import com.example.storeapp.presentation.navigation.StoreNavGraph
 import com.example.storeapp.presentation.theme.StoreAppTheme
 import com.example.storeapp.presentation.viewmodel.ProductListViewModel
@@ -35,7 +34,6 @@ class MainActivity : ComponentActivity() {
                     checkoutViewModel = checkoutViewModel
                 )
             }
-            StoreApp()
         }
     }
 }
@@ -44,6 +42,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     StoreAppTheme {
-        StoreApp()
+
     }
 }

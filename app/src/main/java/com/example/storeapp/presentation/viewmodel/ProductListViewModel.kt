@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ProductListViewModel  @Inject constructor(private val getProductsUseCase: GetProductsUseCase) : ViewModel() {
+open class ProductListViewModel  @Inject constructor(private val getProductsUseCase: GetProductsUseCase) : ViewModel() {
 
     private val _products = MutableStateFlow<List<Product>>(emptyList())
     val products: StateFlow<List<Product>> get() = _products

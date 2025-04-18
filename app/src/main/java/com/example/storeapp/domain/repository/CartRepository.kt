@@ -7,4 +7,5 @@ interface CartRepository {
     fun removeFromCart(product: Product)
     fun getCartItems(): List<Product>
     fun clearCart()
+    fun getTotalAmount(): Double
 }

@@ -23,7 +23,6 @@ fun StoreNavGraph(
             ProductListScreen(
                 viewModel = productListViewModel,
                 cartViewModel = cartViewModel,
-                checkoutViewModel = checkoutViewModel,
                 onCartClick = { navController.navigate(Screen.Cart.route) }
             )
         }
@@ -31,6 +30,7 @@ fun StoreNavGraph(
         composable(Screen.Cart.route) {
             CartScreen(
                 cartViewModel = cartViewModel,
+                checkoutViewModel = checkoutViewModel,
                 onCheckoutClick = { navController.navigate(Screen.Checkout.route) }
             )
         }
@@ -38,6 +38,7 @@ fun StoreNavGraph(
         composable(Screen.Checkout.route) {
             CheckoutScreen(
                 checkoutViewModel = checkoutViewModel,
+                cartViewModel = cartViewModel,
                 onBackToHomeClick = { navController.popBackStack(Screen.ProductList.route, false) }
             )
         }

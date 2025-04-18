@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class CheckoutViewModel @Inject constructor(private val placeOrderUseCase: PlaceOrderUseCase) : ViewModel() {
+open class CheckoutViewModel @Inject constructor(private val placeOrderUseCase: PlaceOrderUseCase) : ViewModel() {
     private val _orderStatus = MutableStateFlow<OrderStatus?>(null)
     val orderStatus: StateFlow<OrderStatus?> get() = _orderStatus
 
