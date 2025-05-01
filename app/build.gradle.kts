@@ -2,12 +2,11 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-
-  /* // kotlin("plugin.serialization")*/
     alias(libs.plugins.hilt.android)
-    //alias(libs.plugins.kotlin.kapt)
-    kotlin("kapt")
-    alias(libs.plugins.safe.args)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.serialization)
+    //alias(libs.plugins.navigation.safe.args.ktx)
+
 }
 
 android {
@@ -41,7 +40,7 @@ android {
         jvmTarget = "11"
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15"
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
     buildFeatures {
         compose = true
@@ -69,7 +68,8 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.hilts.android)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

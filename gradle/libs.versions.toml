@@ -12,12 +12,10 @@ coilCompose = "2.7.0"
 hiltVersion = "2.56.1"
 kspVersion = "1.9.20-1.0.14"
 navVersion = "2.8.9"
-uiToolingPreviewAndroid = "1.7.8"
-kotlinxSerialization = "1.9.0"
 kotlinxSerializationJson = "2.0.21"
 composeCompiler = "1.5.15"
 navigationCompose = "2.8.9"
-kaptVersion = "2.50.1"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,6 +25,7 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+
 ui = { group = "androidx.compose.ui", name = "ui" }
 ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -35,17 +34,16 @@ material3 = { group = "androidx.compose.material3", name = "material3" }
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 
-
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 
 hilts-android = { group = "com.google.dagger", name = "hilt-android", version = "2.56.1" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version = "2.56.1" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.2.0" }
 
 navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version = "2.9.0-alpha09" }
 navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version = "2.9.0-alpha09" }
 
-navigation-safe-args-ktx = { group = "androidx.navigation", name = "navigation-safe-args-ktx", version.ref = "navVersion" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.8.1" }
 
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
@@ -56,9 +54,6 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
-kotlin-kapt = { id = "kotlin-kapt", version.ref = "kaptVersion" }
-kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navVersion" }
-kotlinx-serialization = { id = "plugin.serialization", version.ref = "kotlinxSerializationJson" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
 kotlin-serialization = {id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinxSerializationJson"}
-
+navigation-safe-args-ktx = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navVersion" }
