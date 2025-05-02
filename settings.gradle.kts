@@ -26,5 +26,5 @@ dependencyResolutionManagement {
 }
 //enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
-rootProject.name = "StoreApp"
-include(":app")
+rootProject.name = "android-clean-arch-storeapp"
+include(":clean arch")
